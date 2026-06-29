@@ -34,3 +34,24 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+---
+
+## 新シリーズの追加手順
+
+1. Coworkのチャット出力をコピーして `scripts/input.json` に貼り付けて保存する
+
+2. コマンドプロンプトで以下を実行する
+
+```cmd
+cd C:\Users\akuta\OneDrive\Desktop\rekishi-no-kaibougaku
+node scripts/save-series.js
+```
+
+以上で完了。ファイル保存からGitHubプッシュまで自動で行われます。
+
+### dry-run（動作確認のみ・保存しない）
+
+```cmd
+node scripts/save-series.js --dry-run
+```

@@ -1,0 +1,39 @@
+{
+  "series": {
+    "id": "ottoman-empire",
+    "category": "world",
+    "label": "オスマン帝国編",
+    "englishLabel": "Ottoman Empire",
+    "description": "三大陸を支配した六百年。征服・共存・崩壊の物語。",
+    "accentColor": "#9B1A2E",
+    "accentColorLight": "#f5d0d8",
+    "status": "active",
+    "order": 2
+  },
+  "articles": [
+    {
+      "episode": 1,
+      "slug": "osman-i-founding",
+      "title": "オスマン帝国はなぜ600年も続いたのか",
+      "kicker": "Devlet-i Aliyye — 1299年",
+      "description": "小さな部族国家が、なぜ三大陸を支配する大帝国になれたのか。",
+      "readingTime": 5,
+      "era": "1299年",
+      "location": "アナトリア半島",
+      "tags": ["建国", "遊牧民", "イスラム"],
+      "facts": [
+        { "num": "1299年", "label": "オスマン帝国建国" },
+        { "num": "600年", "label": "帝国が続いた年月" },
+        { "num": "3大陸", "label": "支配した領土の広がり" }
+      ],
+      "body": [
+        { "type": "paragraph", "text": "1299年、アナトリア半島の西端に小さな部族国家が生まれた。創設者の名はオスマン1世。のちに「オスマン帝国」と呼ばれる王朝の始祖だ。" },
+        { "type": "callout", "title": "オスマン1世とは？", "text": "テュルク系遊牧民の族長。ビザンツ帝国との国境地帯で勢力を拡大し、独立した公国を建設した。" },
+        { "type": "scene_break" },
+        { "type": "paragraph", "text": "当初は小さな辺境の公国に過ぎなかった。しかし、その後わずか150年でコンスタンティノープルを陥落させ、東ローマ帝国を滅ぼすことになる。" }
+      ],
+      "publishedAt": null,
+      "seriesComplete": false
+    }
+  ]
+}
