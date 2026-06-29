@@ -3,9 +3,9 @@
   "category": "world",
   "label": "オスマン帝国編",
   "englishLabel": "Ottoman Empire",
-  "description": "三大陸を支配した六百年。征服・共存・崩壊の物語。",
+  "description": "600年にわたって東西文明の交差点に君臨した巨大帝国の、栄枯盛衰の全史。",
   "accentColor": "#9B1A2E",
-  "accentColorLight": "#f5d0d8",
+  "accentColorLight": "#D4637A",
   "status": "active",
   "order": 2
 }
