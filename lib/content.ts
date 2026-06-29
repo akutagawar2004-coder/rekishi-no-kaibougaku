@@ -1,8 +1,15 @@
 import fs from "fs";
 import path from "path";
 
+export type Category = {
+  id: string;
+  label: string;
+  order: number;
+};
+
 export type Series = {
   id: string;
+  category: string;
   label: string;
   englishLabel: string;
   description: string;
@@ -42,12 +49,22 @@ function readJson<T>(filePath: string): T {
   return JSON.parse(fs.readFileSync(filePath, "utf-8")) as T;
 }
 
+export function getAllCategories(): Category[] {
+  const filePath = path.join(contentDir, "categories.json");
+  const data = readJson<Category[]>(filePath);
+  return data.sort((a, b) => a.order - b.order);
+}
+
 export function getAllSeries(): Series[] {
   const dir = path.join(contentDir, "series");
   const files = fs.readdirSync(dir).filter((f) => f.endsWith(".json"));
   return files
     .map((f) => readJson<Series>(path.join(dir, f)))
     .sort((a, b) => a.order - b.order);
+}
+
+export function getSeriesByCategory(categoryId: string): Series[] {
+  return getAllSeries().filter((s) => s.category === categoryId);
 }
 
 export function getSeriesById(id: string): Series | null {

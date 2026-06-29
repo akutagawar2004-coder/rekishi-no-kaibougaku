@@ -8,7 +8,7 @@ export default function SeriesCard({ series }: Props) {
 
   return (
     <Link
-      href={isComingSoon ? "#" : `/${series.id}`}
+      href={isComingSoon ? "#" : `/${series.category}/${series.id}`}
       className={`block rounded-[4px] border p-5 transition-opacity ${
         isComingSoon ? "cursor-default opacity-70" : "hover:opacity-90"
       }`}

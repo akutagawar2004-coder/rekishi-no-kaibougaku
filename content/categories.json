@@ -1,0 +1,6 @@
+[
+  { "id": "world",      "label": "世界史",  "order": 1 },
+  { "id": "japan",      "label": "日本史",  "order": 2 },
+  { "id": "philosophy", "label": "哲学",    "order": 3 },
+  { "id": "science",    "label": "科学",    "order": 4 }
+]

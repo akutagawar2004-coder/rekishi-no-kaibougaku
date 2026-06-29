@@ -3,13 +3,14 @@ import { Article } from "@/lib/content";
 
 type Props = {
   article: Article;
+  category: string;
   accentColor: string;
 };
 
-export default function NextEpisodeCard({ article, accentColor }: Props) {
+export default function NextEpisodeCard({ article, category, accentColor }: Props) {
   return (
     <Link
-      href={`/${article.series}/${article.slug}`}
+      href={`/${category}/${article.series}/${article.slug}`}
       className="block rounded-[4px] border p-5 transition-opacity hover:opacity-80"
       style={{
         background: "var(--color-surface)",
