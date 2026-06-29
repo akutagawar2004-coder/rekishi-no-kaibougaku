@@ -1,0 +1,34 @@
+name: 自動投稿
+
+on:
+  schedule:
+    # 月・水・金 午前10時 JST (= 01:00 UTC)
+    - cron: "0 1 * * 1,3,5"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: チェックアウト
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Node.js セットアップ
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: 自動投稿スクリプト実行
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          TZ: Asia/Tokyo
+        run: node scripts/publish.js
