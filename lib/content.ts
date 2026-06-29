@@ -39,6 +39,8 @@ export type Article = {
   tags: string[];
   facts: Fact[];
   body: BodyBlock[];
+  imageUrl?: string;
+  imageAlt?: string;
   publishedAt: string | null;
   seriesComplete: boolean;
 };

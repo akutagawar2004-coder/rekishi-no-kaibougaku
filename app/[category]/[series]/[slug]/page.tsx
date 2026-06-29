@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 import type { Metadata } from "next";
 import {
   getAllCategories,
@@ -137,6 +138,33 @@ export default async function ArticlePage({ params }: Props) {
 
         {/* Divider */}
         <div className="my-8 h-px" style={{ background: "var(--color-gold)" }} />
+
+        {/* Hero Image */}
+        {article.imageUrl && (
+          <figure className="mb-8">
+            <div className="overflow-hidden rounded-[4px]">
+              <Image
+                src={article.imageUrl}
+                alt={article.imageAlt ?? article.title}
+                width={720}
+                height={480}
+                className="w-full object-cover"
+              />
+            </div>
+            {article.imageAlt && (
+              <figcaption
+                className="mt-2 text-center"
+                style={{
+                  fontFamily: "var(--font-source-sans-3)",
+                  fontSize: "12px",
+                  color: "var(--color-muted)",
+                }}
+              >
+                {article.imageAlt}
+              </figcaption>
+            )}
+          </figure>
+        )}
 
         {/* Body */}
         <ArticleBody blocks={article.body} accentColor={accentColor} />
