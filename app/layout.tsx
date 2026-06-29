@@ -37,8 +37,8 @@ export const metadata: Metadata = {
     siteName: "歴史の解剖学",
     type: "website",
   },
-  verification: {
-    google: "nrezYP6LL6ambC3qhPNeNuhZlWJT-lhktA83Ed-uswg",
+  other: {
+    "google-site-verification": "nrezYP6LL6ambC3qhPNeNuhZlWJT-lhktA83Ed-uswg",
   },
 };
 
