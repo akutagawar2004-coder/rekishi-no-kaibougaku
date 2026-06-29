@@ -1,0 +1,11 @@
+{
+  "id": "ottoman-empire",
+  "category": "world",
+  "label": "オスマン帝国編",
+  "englishLabel": "Ottoman Empire",
+  "description": "600年にわたって東西文明の交差点に君臨した巨大帝国の、栄枯盛衰の全史。",
+  "accentColor": "#9B1A2E",
+  "accentColorLight": "#D4637A",
+  "status": "active",
+  "order": 1
+}
