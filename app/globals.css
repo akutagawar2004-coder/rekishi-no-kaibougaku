@@ -1,0 +1,20 @@
+@import "tailwindcss";
+
+:root {
+  --color-parchment:     #f5f0e8;
+  --color-ink:           #1a1612;
+  --color-ink-secondary: #4a3f35;
+  --color-gold:          #b8972a;
+  --color-gold-light:    #e8d48a;
+  --color-surface:       #ede8df;
+  --color-muted:         #7a6e62;
+}
+
+html {
+  background-color: var(--color-parchment);
+  color: var(--color-ink);
+}
+
+body {
+  font-family: var(--font-lora), var(--font-noto-serif-jp), serif;
+}
