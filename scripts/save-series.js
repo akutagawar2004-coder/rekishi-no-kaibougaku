@@ -97,6 +97,16 @@ async function main() {
     // slug がなければ自動生成
     const slug = article.slug || `${seriesId}-ep${episodePad(episode)}`;
 
+    // body が文字列の場合、\n\n で分割して paragraph ブロックに変換する
+    let bodyBlocks = article.body ?? [];
+    if (typeof bodyBlocks === "string") {
+      bodyBlocks = bodyBlocks
+        .split("\n\n")
+        .map((t) => t.trim())
+        .filter((t) => t.length > 0)
+        .map((t) => ({ type: "paragraph", text: t }));
+    }
+
     const articleData = {
       series: seriesId,
       episode,
@@ -109,7 +119,7 @@ async function main() {
       location: article.location ?? "",
       tags: article.tags ?? [],
       facts: article.facts ?? [],
-      body: article.body ?? [],
+      body: bodyBlocks,
       publishedAt: article.publishedAt ?? null,
       seriesComplete: article.seriesComplete ?? false,
     };
